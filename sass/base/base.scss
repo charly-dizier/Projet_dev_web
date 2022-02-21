@@ -1,0 +1,10 @@
+body {
+    @include redressed--grey-dark;
+    background-color: $color-dark;
+    display: flex;
+    flex-direction: column;
+}
+.back__brown {
+    background-color: $color-brown;
+}
+

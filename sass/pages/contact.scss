@@ -1,0 +1,86 @@
+.contact__section1 {
+    @include container;
+    align-items: flex-end;
+    padding: 5% 20% 3% 20%;
+    &__txt--form {
+        @include item;
+        @include column;
+        margin-right: 5%;
+        min-width: 550px;
+        & h1 {
+            @include sous_item;
+            @include amerika--gold;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        & h2 {
+            @include sous_item;
+            @include alice--grey-dark;
+            font-size: 1.5rem;
+            margin-bottom: 35px;
+        }
+        & p {
+            @include sous_item;
+            font-size: 1.4rem;
+            max-width: 500px;
+            color: $color-white;
+            margin-bottom: 50px
+        }
+    }
+    &__img {
+        @include item;
+        justify-content: center;
+        margin-left: 5%;
+        & img {
+            border-radius: 250px 250px 8px 8px;
+        }
+    }
+}
+.contact__section1__form {
+    @include sous_item;
+    @include column;
+    max-width: 500px;
+    border: none;
+    &--input {
+        @include sous_item;
+        @include column;
+        background-color: $color-dark;
+        border-bottom: 1px solid #706b64;
+        padding-bottom: 30px;
+        & input {
+            @include alice--grey-dark;
+            font-size: 1.2rem;
+            text-align: center;
+            background-color: $color-dark;
+            border: none;
+        }
+    }
+    &--comment {
+        @include sous_item;
+        @include column;
+        background-color: $color-dark;
+        border-bottom: 1px solid #706b64;
+        padding-bottom: 30px;
+        & textarea {
+            @include alice--grey-dark;
+            font-size: 1.2rem;
+            text-align: center;
+            background-color: $color-dark;
+            border: none;
+            resize: none;
+        }
+    }&--btn {
+        @include sous_item;
+        justify-content: flex-end;
+        margin-top: 30px;
+        & input {
+            @include alice--white;
+            font-size: 1rem;
+            padding: 15px 25px 15px 25px;
+            background-color: #685A46;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+    }  
+}

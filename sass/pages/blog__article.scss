@@ -1,0 +1,223 @@
+
+.article {
+    @include container;
+    background-color: $color-wine;
+    padding: 2% 15% 2% 15%;
+
+    //block gauche - article -
+    &__card {
+        @include item;
+        @include column;
+        @include flex-grow ($grow3);
+        margin-right: 5%;
+        &--title {
+            @include sous_item;
+            @include column;
+            text-align: center;
+            & h2 {
+                @include bodon--grey;
+                font-size: 2.3rem;
+                margin-bottom: 0px;
+            }
+            & a {
+                font-family: "aliceregular";
+                color: #A8A095;
+                font-size: 1rem;
+                text-decoration: none;
+                margin: 5px;
+            }
+        }
+        &--img {
+            @include sous_item;
+            @include column;
+            margin: 2% 0% 2% 0%;
+        }
+        &--txt {
+            @include sous_item;
+            @include column;
+            font-size: 1.3rem;
+        }
+        &--nav {
+            @include sous_item;
+            & p {
+                @include sous_item;
+                @include column;
+                &:nth-child(1) {
+                    text-align: start;
+                }
+                &:nth-child(2) {
+                    text-align: end;
+                }
+            }
+            & a {
+                @include bodon--grey;
+                text-decoration: none;
+                margin: 20px 0px 70px 0px;
+            }
+        }
+        &--comment {
+            @include sous_item;
+            @include column;
+            font-family: "bodonixtregular";
+            & p:nth-child(2) {
+                color: #C8C3BC;
+                font-size: 1.5rem;
+                margin: 10px 0px 10px 0px;
+            }
+            & p:nth-child(3) {
+                margin-bottom: 5%;
+            }
+        }
+        &__form {
+            @include sous_item;
+            @include column;
+            text-align: center;
+            @include alice--grey-dark;
+            &--comment {
+                @include sous_item;
+                @include column;
+                margin: 1% 0% 1% 0%;
+                & textarea {
+                    @include alice--grey-dark;
+                    font-size: 1rem;
+                    text-align: center;
+                    background-color: $color-wine;
+                    border: 1px solid $color-dark;
+                    border-radius: 4px;
+                    outline: none;
+                    resize: none;
+                }
+            }
+            &--input {
+                @include sous_item;
+                @include column;
+                width: 50%;
+                & input {
+                    @include alice--grey-dark;
+                    font-size: 1rem;
+                    text-align: center;
+                    background-color: $color-wine;
+                    border: 1px solid $color-dark;
+                    border-radius: 4px;
+                    outline: none;
+                    padding: 2% 0% 2% 0%;
+                    margin: 1% 0% 2% 0%;
+                }
+            }
+            &--checkbox {
+                @include sous_item;
+                @include bodon--grey;
+                margin: 2% 0% 2% 0%; 
+                font-size: 0.8rem;
+                align-items: center;
+            }
+            &--btn {
+                @include sous_item;
+                @include column;
+                align-items: center;
+                & input {
+                    @include alice--white;
+                    background-color: $color-sand;
+                    font-size: 1rem;
+                    padding: 15px 25px 15px 25px;
+                    margin-top: 2%;
+                    border-radius: 4px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //block droit - auteur nav -
+    &__auteur {
+        @include item;
+        @include column;
+        @include flex-grow;
+        margin-left: 5%;
+        &--img {
+            @include sous_item;
+            @include column;
+            & img {
+                border-radius: 170px 170px 8px 8px;
+            }
+        }
+        &--txt {
+            @include sous_item;
+            @include column;
+            text-align: center;
+            & p {
+                color: $color-grey-dark;
+                font-size: 1.1rem;
+                margin: 10px 25px 5px 25px;            
+            }
+        }
+        &--btn {
+            @include sous_item;
+            @include column;
+            align-items: center;
+            margin: 20px 0px 20px 0px;
+            & a {
+                @include alice--white;
+                background-color: $color-sand;
+                font-size: 1rem;
+                border-radius: 4px;
+                padding: 0px 25px 0px 25px;
+                margin: 10px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+        &--social {
+            @include sous_item;
+            justify-content: center;
+            list-style: none;
+            & a {
+                margin: 3px;
+            }
+        }
+        &__nav {
+            @include sous_item;
+            @include column;
+            margin-top: 50px;
+            &--title {
+                @include sous_item;
+                @include column;
+                & h2 {
+                    @include bodon--grey-dark;
+                    font-size: 1.7rem;
+                    text-align: center;
+                }
+            }
+            &--underline {
+                @include sous_item;
+                @include column;
+                border-top: 3px solid $color-dark;
+                width: 40%;
+                margin: auto;
+                padding-bottom: 50px;
+            }
+            &--img {
+                @include sous_item;
+                @include column;
+                margin-top: 20px;
+            }
+            &--txt {
+                @include sous_item;
+                @include column;
+                background-color: #242729;
+                width: 50%;
+                position: relative;
+                top: -33px;
+                & p {
+                    @include bodon--grey-dark;
+                    text-align: center;
+                    margin: 5px 0px 5px 0px;
+                }
+                & a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

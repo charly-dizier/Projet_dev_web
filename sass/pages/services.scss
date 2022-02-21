@@ -1,0 +1,45 @@
+
+.services__section2 {
+    @include container;
+    @include column;
+    text-align: center;
+    & h2 {
+        @include amerika--gold;
+        font-size: 2.2rem;
+    }
+    & h3 {
+        @include alice--white;
+        font-size: 1.5rem;
+    }
+    & p {
+        font-size: 1.4rem;
+    }
+    &__part1 {
+        @include sous_item;
+        @include column;
+        padding: 1% 15% 1% 15%;
+    }
+    &__part2 {
+        @include sous_item;
+        padding: 1% 15% 1% 15%;
+        &--block {
+            padding: 2%;
+        }
+    }
+    &__part3 {
+        @include sous_item;
+        @include column;
+        align-items: center;
+        margin-bottom: 2%;
+        & a {
+            @include alice--white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        & p {
+            background-color: $color-sand;
+            padding: 10px 20px 10px 20px;
+            border-radius: 4px;
+        }
+    }
+}

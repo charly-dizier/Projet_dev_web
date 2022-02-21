@@ -1,0 +1,47 @@
+
+.blog__section {
+    @include container;
+    @include column;
+    background-color: $color-brown;
+    &--block {
+        @include sous_item;
+        padding: 0% 15% 0% 15%;
+        margin-bottom: 5%;
+        @media (max-width: 1024px) {
+            @include column;
+        }
+    }
+    &--column {
+        @include sous_item;
+        @include column;
+        margin: 1% 2% 0% 2%;
+    }
+}
+.blog__card {
+    @include sous_item;
+    align-items: center;
+    justify-content: center;
+    & a {
+        text-decoration: none;
+    }
+    &--underline {
+        border-bottom: 2px solid #4e4e4e;
+        width: 50%;
+        margin: 20px 0px 20px 2px;
+    }
+    &--txt {
+        text-align: center;
+        & h2 {
+            @include bodon--grey;
+            max-width: 340px;
+            font-size: 1.5rem;
+            margin-top: 5px;
+            text-align: center
+        }
+        & h3 {
+            @include alice--grey-dark;
+            font-size: 0.8rem;
+            margin-bottom: 1px;
+        }
+    }
+}

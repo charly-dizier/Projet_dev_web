@@ -1,0 +1,87 @@
+.footer {
+    @include container;
+    @include column;
+    align-items: center;
+    &__title {
+        @include alice--white;
+        font-size: 1.2rem;
+        padding: 50px 0px 20px 0px;
+    }
+    &__img {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 10px;
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+.footer__part2 {
+    @include item;
+    align-items: flex-end;
+    padding: 0% 20% 0% 20%;
+    &--txt {
+        @include item;
+        @include column;
+        @include flex-grow;
+        & h3 {
+            @include alice--white;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+        & p {
+            margin-top: 15px;
+        }
+    }
+    &--trait {
+        border-bottom: 3px solid $color-gold;
+        width: 70%;
+    }
+    &--id {
+        @include item;
+        @include column;
+        @include flex-grow($grow2);
+        @include amerika--gold;
+        text-align: center;
+        & span {
+            position: absolute;
+            font-size: 0.8rem;
+            transform: translateX(-55px) 
+        }
+    }
+    &--social {
+        @include item;
+        @include column;
+        & ul {
+            @include sous_item;
+            justify-content: center;
+            list-style: none;
+        }
+        & li {
+            margin: 0px 5px 0px 5px;
+        }
+    }
+    &--nav {
+        @include item;
+        @include column;
+        @include flex-grow;
+        align-items: center;
+        list-style: none;
+        & li {
+            margin: 5px 0px 5px 0px;
+        }
+        & a {
+            @include alice--grey-dark;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    }
+}
+.footer__legal {
+    @include item;
+    @include column;
+    @include alice--grey-dark;
+    background-color: #303436;
+    font-size: 0.8rem;
+    text-align: center;
+}

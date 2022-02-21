@@ -1,0 +1,67 @@
+.login {
+    @include container;
+    background-color: $color-sand;
+    padding: 3% 25% 3% 25%;
+    align-items: center;
+    @media (max-width: 1024px) {
+        margin: auto;
+        padding: 10%;
+    }
+    &__txt {
+        @include sous_item;
+        @include column;
+        min-width: 380px;
+        text-align: center;
+        margin-right: 2%;
+        & h3 {
+            @include amerika--gold;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        & p {
+            color: $color-grey;
+            font-size: 1.1rem;
+        }
+    }
+}
+.login__form {
+    @include sous_item;
+    @include column;
+    &--block {
+        @include sous_item;
+    }
+    &--input {
+        @include alice--grey-dark;
+        background-color: $color-sand;
+        font-size: 1rem;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid $color-dark;
+        border-radius: 4px;
+        text-align: center;
+        outline: none;
+        width: 100%;
+    }
+    &--submit {
+        @include alice--grey;
+        background-color: $color-dark;
+        font-size: 1rem;
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+.login__img {
+    @include item;
+    @include column;
+    margin-left: 2%;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    & img {
+        border-radius: 230px 230px 8px 8px;
+    }
+}

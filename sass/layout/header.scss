@@ -1,0 +1,48 @@
+.header {
+    @include container;
+    border-bottom: 5px solid #ac9857;
+    align-items: flex-end;
+    &__id {
+        @include item;
+        @include flex-grow;
+        @include column;
+        @include amerika--gold;
+        text-align: center;
+        & span {
+            position: absolute;
+            font-size: 0.8rem;
+            transform: translateX(-55px) 
+        }
+    }
+}
+.header__nav {
+    @include item;
+    @include flex-grow($grow2);
+    & ul {
+        @include item;
+        @include flex-grow ($grow4);
+        justify-content: space-around;
+        list-style: none;
+        padding: 0% 10% 0% 10%;
+    }
+    & a {
+        @include alice--grey-dark;
+        font-size: 1.3rem;
+        margin: 0px 10px 0px 10px;
+        text-decoration: none;
+    }
+}
+.header__social {
+    @include item;
+    @include flex-grow;
+    & ul {
+        @include item;
+        @include flex-grow;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 10px;
+        & a {
+            margin: 0px 10px 0px 10px;
+        }
+    }
+}

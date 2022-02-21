@@ -1,0 +1,39 @@
+@mixin column {
+    flex-direction: column;
+}
+@mixin flex-grow ($grow: $grow1){
+    flex: $grow;
+}
+
+//mixin police d'ecritur
+@import "../base/police";
+
+@mixin alice--white {
+    font-family: "aliceregular";
+    color: $color-white;
+}
+@mixin alice--grey {
+    font-family: "aliceregular";
+    color: $color-grey;
+}
+@mixin alice--grey-dark {
+    font-family: "aliceregular";
+    color: $color-grey-dark;
+}
+@mixin amerika--gold {
+    font-family: "amerikaregular";
+    color: $color-gold;
+}
+@mixin redressed--grey-dark {
+    font-family: "redressedregular";
+    color: $color-grey-dark;
+}
+@mixin bodon--grey-dark {
+    font-family: "bodonixtregular";
+    color: $color-grey-dark;
+}
+@mixin bodon--grey {
+    font-family: "bodonixtregular";
+    color: $color-grey;
+}
+

@@ -1,0 +1,23 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+
+@import "./base/base";
+
+@import "./components/title__section";
+
+@import "./layout/container";
+@import "./layout/header";
+@import "./layout/login";
+@import "./layout/footer";
+
+@import "./components/block__txt-img";
+@import "./components/blog__section";
+
+@import "./pages/index";
+@import "./pages/services";
+@import "./pages/blog";
+@import "./pages/blog__article";
+@import "./pages/shop";
+@import "./pages/contact";
