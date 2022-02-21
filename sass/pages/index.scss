@@ -43,6 +43,15 @@
     &--txt {
         font-size: 1.3rem;
         margin-bottom: 2%;
+        & a {
+            text-decoration: none;
+            color: $color-gold;
+            font-size: 1.7rem;
+            & img {
+                width: 2.7%;
+                justify-content: flex-end;
+            }
+        }
     }
     &--devnote {
         font-size: .8rem;
