@@ -43,10 +43,13 @@
         @include flex-grow($grow2);
         @include amerika--gold;
         text-align: center;
-        & span {
-            position: absolute;
+        & h1 {
+            font-size: 2rem;
+            margin-bottom: 2px;
+        }
+        & h2 {
             font-size: 0.8rem;
-            transform: translateX(-55px) 
+            margin-top: 1px;
         }
     }
     &--social {
@@ -69,6 +72,9 @@
         list-style: none;
         & li {
             margin: 5px 0px 5px 0px;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
         & a {
             @include alice--grey-dark;

@@ -1,9 +1,39 @@
+//wrapper
+.wrapper__body {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+.wrapper
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    &--background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+        transform: translateZ(-10px) scale(2);
+        top: 120px;
+        left: -30px;
+    }
+    &--title {
+        @include amerika--gold;
+        font-size: 7rem;
+        text-shadow: 0 0 5px black;
+    }  
+}
 
 .home__section1--container {
     @include container;
-    background-image: url(../img/img-background.jpg);
-    background-attachment: fixed;
-    padding: 5% 20% 5% 20%;
+    padding: 0% 20% 15% 20%;
     justify-content: center;
 }
 .home__section1 {
@@ -14,6 +44,7 @@
     padding: 2% 5% 2% 5%;
     max-width: 900px;
     min-width: 600px;
+    border: 3px solid $color-gold;
     &__id {
         @include sous_item;
         &--title {
@@ -62,7 +93,7 @@
 .index__section2 {
     @include container;
     @include column;
-    margin-bottom: 5%;
+    margin: 5% 0% 5% 0%;
     &__title {
         @include sous_item;
         @include column;

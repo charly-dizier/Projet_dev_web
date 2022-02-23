@@ -41,6 +41,9 @@
         text-align: center;
         outline: none;
         width: 100%;
+        &:focus {
+            border: 2px solid $color-dark;
+        }
     }
     &--submit {
         @include alice--grey;
@@ -52,6 +55,16 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    & #email {
+        &:not(:focus):invalid {
+            transition: border 500ms;
+            border: 2px solid #ad0000d2;
+            animation: headshake 100ms cubic-bezier(.4,.1,.6,.9) 2;
+        }
     }
 }
 .login__img {

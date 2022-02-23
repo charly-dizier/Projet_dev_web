@@ -40,6 +40,9 @@
             background-color: $color-sand;
             padding: 10px 20px 10px 20px;
             border-radius: 4px;
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 }
