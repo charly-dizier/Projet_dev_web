@@ -1,3 +1,4 @@
+//block
 @mixin column {
     flex-direction: column;
 }
@@ -5,7 +6,7 @@
     flex: $grow;
 }
 
-//mixin police d'ecritur
+//mixin police d'ecriture
 @import "../base/police";
 
 @mixin alice--white {
@@ -37,3 +38,11 @@
     color: $color-grey;
 }
 
+//media 
+@mixin marge__off {
+    margin: 0;
+    padding: 0;
+}
+@mixin display__off {
+    display: none;
+}

@@ -3,6 +3,10 @@
     @include container;
     background-color: $color-wine;
     padding: 2% 15% 2% 15%;
+    @media (max-width: 1024px) {
+        @include column;
+    }
+
 
     //block gauche - article -
     &__card {
@@ -135,6 +139,11 @@
         @include column;
         @include flex-grow;
         margin-left: 5%;
+        @media (max-width: 1024px) {
+           width: 50%;
+           margin: auto;
+           padding-top: 5%;
+        }        
         &--img {
             @include sous_item;
             @include column;

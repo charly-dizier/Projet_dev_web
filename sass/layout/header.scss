@@ -4,7 +4,15 @@
     border-bottom: 5px solid #ac9857;
     align-items: flex-end;
     padding-top: 0%;
-
+    @media (max-width: 1024px) {
+        @include column;
+        align-items: center;
+    }
+    & div:nth-child(2) {
+        @media (max-width: 1024px) {
+            order: 3;
+        }
+    } 
     &__id {
         @include item;
         @include flex-grow;
@@ -12,6 +20,10 @@
         @include amerika--gold;
         text-align: center;
         margin-top: 0%;
+        @media (max-width: 1024px) {
+            margin: 0;
+            padding: 0;
+        }
         & h1 {
             font-size: 2rem;
             margin-bottom: 2px;
@@ -26,6 +38,10 @@
 .header__nav {
     @include item;
     @include flex-grow($grow2);
+    @media (max-width: 1024px) {
+        margin: 0;
+        padding: 0;
+    }
     & ul {
         @include item;
         @include flex-grow ($grow4);
@@ -48,12 +64,20 @@
 .header__social {
     @include item;
     @include flex-grow;
+    @media (max-width: 1024px) {
+        margin: 0;
+        padding: 0;
+    }
     & ul {
         @include item;
         @include flex-grow;
         justify-content: center;
         list-style: none;
         margin-bottom: 10px;
+        @media (max-width: 1024px) {
+            margin: 0;
+            padding: 0;
+        }
         & a {
             margin: 0px 10px 0px 10px;
         }

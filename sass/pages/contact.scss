@@ -31,6 +31,9 @@
         @include item;
         justify-content: center;
         margin-left: 5%;
+        @media (max-width: 1024px) {
+            @include display__off;
+        }
         & img {
             border-radius: 250px 250px 8px 8px;
         }

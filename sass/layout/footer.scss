@@ -20,6 +20,11 @@
     @include item;
     align-items: flex-end;
     padding: 0% 20% 0% 20%;
+    @media (max-width: 1024px) {
+        @include column;
+        align-items: center;
+        text-align: center;
+    }
     &--txt {
         @include item;
         @include column;
@@ -36,6 +41,11 @@
     &--trait {
         border-bottom: 3px solid $color-gold;
         width: 70%;
+        @media (max-width: 1024px) {
+            width: auto;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }
     &--id {
         @include item;
@@ -43,6 +53,9 @@
         @include flex-grow($grow2);
         @include amerika--gold;
         text-align: center;
+        @media (max-width: 1024px) {
+            @include marge__off;
+        }
         & h1 {
             font-size: 2rem;
             margin-bottom: 2px;
@@ -70,8 +83,16 @@
         @include flex-grow;
         align-items: center;
         list-style: none;
+        @media (max-width: 1024px) {
+            @include marge__off;
+            flex-direction: row;
+            justify-content: space-between;
+        }
         & li {
             margin: 5px 0px 5px 0px;
+            @media (max-width: 1024px) {
+                @include marge__off;
+            }    
             &:hover {
                 transform: scale(1.2);
             }
