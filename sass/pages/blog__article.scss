@@ -6,6 +6,9 @@
     @media (max-width: 1024px) {
         @include column;
     }
+    @media (max-device-width: 480px) {
+        padding: 2% 1% 2% 1%;
+    }
 
 
     //block gauche - article -
@@ -14,6 +17,9 @@
         @include column;
         @include flex-grow ($grow3);
         margin-right: 5%;
+        @media (max-device-width: 480px) {
+            margin: auto;
+        }
         &--title {
             @include sous_item;
             @include column;
@@ -143,7 +149,10 @@
            width: 50%;
            margin: auto;
            padding-top: 5%;
-        }        
+        }
+        @media (max-device-width: 480px) {
+            margin-top: 10%;
+        }      
         &--img {
             @include sous_item;
             @include column;
@@ -158,7 +167,10 @@
             & p {
                 color: $color-grey-dark;
                 font-size: 1.1rem;
-                margin: 10px 25px 5px 25px;            
+                margin: 10px 25px 5px 25px;
+                @media (max-device-width: 480px) {
+                    margin: 2% 3% 1% 3%;
+                }           
             }
         }
         &--btn {
@@ -210,6 +222,10 @@
                 @include sous_item;
                 @include column;
                 margin-top: 20px;
+                @media (max-device-width: 480px) {
+                    margin: auto;
+                    align-items: center;
+                }
             }
             &--txt {
                 @include sous_item;
@@ -218,6 +234,9 @@
                 width: 50%;
                 position: relative;
                 top: -33px;
+                @media (max-device-width: 480px) {
+                    width: 100%;
+                }
                 & p {
                     @include bodon--grey-dark;
                     text-align: center;

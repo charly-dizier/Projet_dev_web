@@ -12,7 +12,7 @@
         @media (max-width: 1024px) {
             order: 3;
         }
-    } 
+    }
     &__id {
         @include item;
         @include flex-grow;
@@ -48,6 +48,9 @@
         justify-content: space-around;
         list-style: none;
         padding: 0% 10% 0% 10%;
+        @media (max-device-width: 480px) {
+            padding: 0;
+        }
     }
     & li {
         &:hover {
@@ -59,7 +62,12 @@
         font-size: 1.3rem;
         margin: 0px 10px 0px 10px;
         text-decoration: none;
-    }
+        @media (max-device-width: 480px) {
+        font-size: 1.3rem;
+        margin: auto;
+        padding: 0px 5px 0px 5px ;
+        }
+    }   
 }
 .header__social {
     @include item;

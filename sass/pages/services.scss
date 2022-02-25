@@ -3,13 +3,29 @@
     @include container;
     @include column;
     text-align: center;
+    @media (max-device-width: 480px) {
+        margin: 0% 0% 10% 0%;
+    }
     & h2 {
         @include amerika--gold;
         font-size: 2.2rem;
+        @media (max-device-width: 480px) {
+            font-size: 1.7rem;
+            margin-bottom: 0px;
+        }
+    }
+    & br {
+        @media (max-device-width: 480px) {
+            display: none;
+        }
     }
     & h3 {
         @include alice--white;
         font-size: 1.5rem;
+        @media (max-device-width: 480px) {
+            font-size: 1rem;
+            margin-top: 0px;
+        }
     }
     & p {
         font-size: 1.4rem;
@@ -18,10 +34,24 @@
         @include sous_item;
         @include column;
         padding: 1% 15% 1% 15%;
+        @media (max-device-width: 480px) {
+            padding: 1%;
+        }
     }
     &__part2 {
         @include sous_item;
         padding: 1% 15% 1% 15%;
+        @media (max-device-width: 480px) {
+            flex-direction: column;
+            padding: 1% 5% 1% 5%;
+        }
+        & p {
+            @media (max-device-width: 480px) {
+                border-top: 2px solid $color-gold;
+                padding-top: 20px;
+                margin-top: 0px;
+            }
+        }
         &--block {
             padding: 2%;
         }

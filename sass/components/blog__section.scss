@@ -10,6 +10,9 @@
         @media (max-width: 1024px) {
             @include column;
         }
+        @media (max-device-width: 480px) {
+            align-items: center;
+        }
     }
     &--column {
         @include sous_item;
